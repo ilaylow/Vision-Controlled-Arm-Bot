@@ -4,7 +4,7 @@ This repository showcases the use of Computer Vision with Python in trying to ma
 
 ## Meet 'PathFinder'
 
-![PathFinger Image 1](/images/pathfinder/pathfinder1.jpeg)
+![PathFinger Image 1](/images/pathfinder/pathfinder1.jpeg | width=50)
 ![PathFinger Image 2](/images/pathfinder/pathfinder2.jpeg)
 
 
