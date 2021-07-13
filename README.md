@@ -7,4 +7,9 @@ This repository showcases the use of Computer Vision with Python in trying to ma
 ![PathFinger Image 1](/images/pathfinder/pathfinder1.jpg)
 ![PathFinger Image 2](/images/pathfinder/pathfinder2.jpg)
 
+## How Does It Work?
+
+**Note: Some of the methods in the algorithm are adapted from the "Learning OpenCV 4 Computer Vision with Python 3" Textbook authored by Joseph Howse and Joe Minichino.**
+
+
 
