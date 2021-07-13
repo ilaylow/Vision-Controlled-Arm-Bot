@@ -21,7 +21,7 @@ class BackGroundSubtract:
         return
 
     @staticmethod
-    def read_initial_background(cap):
+    def read_initial_background(cap, use_roi = True):
         # Capture 10 frames and discard 9, we do this to allow adjustment of camera's autoexposure
         for i in range(10):
             success, frame = cap.read()
@@ -34,7 +34,10 @@ class BackGroundSubtract:
         print(gray_og) """
         gray_back = cv2.GaussianBlur(gray_og, (BLUR_RADIUS, BLUR_RADIUS), 0)
 
-        return gray_back[roi_lower_Y: roi_upper_Y, roi_lower_X: roi_upper_X] 
+        if use_roi:
+            return gray_back[roi_lower_Y: roi_upper_Y, roi_lower_X: roi_upper_X] 
+        
+        return gray_back
 
     @staticmethod
     def perform_background_subtraction(roi, background, use_external=True):
@@ -54,6 +57,7 @@ class BackGroundSubtract:
         else:
 
             # Get the absolute difference between the frame and the background
+            print(roi.shape, background.shape)
             diff = cv2.absdiff(roi, background)
 
             # Threshold the difference
