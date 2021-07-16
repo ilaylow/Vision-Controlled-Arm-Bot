@@ -105,7 +105,7 @@ def three_function(a,b,c):
     b = str(b)
     c = str(c)
     p1 = "{'start':"+'['+a+','+b+','+c+']'+'}'+'\n'
-    #print(p1)
+    print(p1)
     ser.write(p1.encode("gbk"))
     #ser.write("{'start':['pinmode',13,0]}\n".encode("gbk"))
 

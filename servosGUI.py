@@ -933,7 +933,7 @@ def function_buttons(x,y):
 
 
 def loop():
-    global root
+    global root, ser
     root = tk.Tk()          
     root.title('Quadruped Leg Init')
     root.geometry('500x350')
@@ -969,7 +969,6 @@ def loop():
     # posSelect_buttons(30,385)
 
     # perform_buttons(30,465)
-
     scale(50,70,200)
 
     
