@@ -1,5 +1,4 @@
 import speech_recognition as sr
-import pyautogui as pyauto
 import Adeept
 import time
 from transcribe import get_auth, get_url, on_message, on_close, on_error, on_open, parse_args, pix_send1, pix_send2, pix_send3, pix_send4, pix_send5
@@ -17,7 +16,7 @@ from websocket._abnf import ABNF
 
 def serial_connect():    #Call this function to connect with the server
     global ADDR,tcpClicSock,BUFSIZ,ip_stu,ipaddr,ser
-    com="COM4"    #Get the IP address from Entry
+    com="COM3"    #Get the IP address from Entry
     Adeept.com_init(com,115200,1)
     Adeept.wiat_connect()
     Adeept.three_function("'servo_attach'",0,9)
@@ -25,7 +24,7 @@ def serial_connect():    #Call this function to connect with the server
     Adeept.three_function("'servo_attach'",2,5)
     Adeept.three_function("'servo_attach'",3,3)
     Adeept.three_function("'servo_attach'",4,11)
-    print(com+':Succes')
+    print(com+':Success')
 
 # Importing from Transcribe.py from IBM Watson's Repository
 CHUNK = 1024
