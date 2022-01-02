@@ -61,7 +61,7 @@ def pix_send2(event, rotation_angle):
     Adeept.three_function("'servo_write'",1, rotation_angle)
     #print(var_B.get())
 def pix_send3(event, rotation_angle):
-    time.sleep(0.5)
+    time.sleep(0.001)
     Adeept.three_function("'servo_write'",2, rotation_angle)
     #print(var_C.get())
 def pix_send4(event, rotation_angle):
